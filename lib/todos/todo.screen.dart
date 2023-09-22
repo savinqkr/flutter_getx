@@ -21,12 +21,10 @@ class TodoScreen extends GetView<TodoController> {
             (state) => ListView.builder(
               itemCount: state!.length,
               itemBuilder: (context, index) {
-                // return Text(state[index].todoTitle);
                 final todo = state[index];
                 return ListTile(
                   leading: Text('${todo.todoId}'),
                   title: Text(todo.todoTitle),
-                  // subtitle: Text(post.postBody),
                   trailing: todo.isCompleted
                       ? const Icon(
                           MaterialSymbols.check,

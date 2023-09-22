@@ -22,8 +22,10 @@ import 'todo.model.dart';
 // ------------------------------------------------------------
 // CONTROLLER
 // - PROVIDER 의 데이터를 가져오는 함수를 실행시킨 후,
-// - 데이터를 정상적으로 받았을 경우와 아닐 경우에 대한 처리 진행
-//   ( FutureBuilder 의 snapshot 을 만들어주는 과정이라고 이해하면 편함 )
+// - 데이터를 정상적으로 받았을 경우와 아닐 경우에 대한 상태 처리
+// - 즉, todo.screen.dart 에서 [ 데이터를 정상적으로 받았을 때 ], onLoading , onError 임을
+//   인식하기 위한 상태를 처리해주는 곳
+//   ( FutureBuilder 의 snapshot 안의 상태들을 만들어주는 과정이라고 이해하면 편함 )
 // ------------------------------------------------------------
 class TodoController extends GetxController with StateMixin<List<TodoModel>> {
   final TodoProvider todoProvider;
