@@ -10,14 +10,19 @@ import 'todo.model.dart';
 // BINDING
 // - 무슨 역할인지 아직 잘 모르겠음
 // - 없어도 정상 작동함
+// - 효율적인 메모리 관리를 위해 인스턴스를 시킨것을 어떻게 활용하고, 필요하지 않을 때는 인스턴스를 없애주는 과정이 필요
+// - https://velog.io/@giyeon/flutter-3-2-Getx-%EC%A2%85%EC%86%8D%EC%84%B1-%EA%B4%80%EB%A6%AC-%EB%B0%94%EC%9D%B8%EB%94%A9
+// - https://kanoos-stu.tistory.com/68
+// - https://unsungit.tistory.com/64
+// - https://medium.com/flutter-community/the-flutter-getx-ecosystem-dependency-injection-8e763d0ec6b9
 // ------------------------------------------------------------
-// class TodoBinding extends Bindings {
-//   @override
-//   void dependencies() {
-//     Get.lazyPut(() => TodoProvider());
-//     Get.put(TodoController(todoProvider: Get.find()));
-//   }
-// }
+class TodoBinding extends Bindings {
+  @override
+  void dependencies() {
+    Get.lazyPut(() => TodoProvider());
+    Get.put(TodoController(todoProvider: Get.find()));
+  }
+}
 
 // ------------------------------------------------------------
 // CONTROLLER
