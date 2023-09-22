@@ -22,6 +22,8 @@ class MyApp extends HookWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+      defaultTransition: Transition.native,
+      transitionDuration: Duration.zero,
       getPages: [
         GetPage(
           name: '/',
